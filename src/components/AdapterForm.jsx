@@ -59,8 +59,6 @@ export default function AdapterForm() {
             <input type="text" className="form-control" id="inputDependencias" className="form-control" placeholder="Ingrese dependencias"
              onChange={(evento) => setDependencias(evento.target.value)} />
 
-
-
             <label htmlFor="inputMainClass" className="form-label"> MainClass </label>
             <input type="text" className="form-control" id="inputMainClass" className="form-control" placeholder="Ingrese mainClass"
              onChange={(evento) => setMainClass(evento.target.value)} />

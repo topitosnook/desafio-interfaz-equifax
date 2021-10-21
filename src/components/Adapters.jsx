@@ -1,11 +1,12 @@
 import React from 'react';
 import AdapterForm from './AdapterForm';
 
-export default function Adapters() {
-
+export default function Adapters({name}) {
+  console.log(name);
   return (
     <>
     <main>
+      <p>{name}..</p>
       <h1>Elegir adaptador</h1>
       <section>
         {/* Traer los nombres de los adaptadores */}
@@ -17,4 +18,3 @@ export default function Adapters() {
     </main>
     </>
   );
-}
