@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
 
 export default function Home() {
   return (
@@ -9,9 +8,10 @@ export default function Home() {
         {/* poner el nombre a la orquestacion */}
         {/* Boton para generar la orquestacion */}
         <section>
+          <label htmlFor="">Crear Orquestacion</label>
           <input type='text' />
           <Link to='/adapters'>
-            <Button variant="primary" >Crear una nueva orquestación</Button>
+            <button type="button" class="btn btn-primary">Crear</button>
           </Link>
         </section>
       </main>

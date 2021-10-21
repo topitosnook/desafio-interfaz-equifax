@@ -1,13 +1,12 @@
 import React from 'react';
 import { NavLink } from "react-router-dom"; 
-import { Navbar } from 'react-bootstrap';
 
 export default function Nav() {
   return (
-  <Navbar bg="myRed">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <NavLink to="/" exact className = "navLinks">
       Inicio
     </NavLink>
-  </Navbar>
+  </nav>
   );
 }
