@@ -7,13 +7,9 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "file-saver": "^2.0.5",
-<<<<<<< HEAD
     "formik": "^2.2.9",
     "js-yaml": "^4.1.0",
     "module_name": "^1.0.0",
-=======
-    "js-yaml": "^3.14.1",
->>>>>>> f456c01dcd7646aab5eb099d2af56bc3c1e35d1a
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.3.0",
