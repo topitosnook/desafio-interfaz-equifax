@@ -1,4 +1,5 @@
 import React from 'react';
+import AdapterForm from './AdapterForm';
 
 export default function Adapters() {
 
@@ -11,6 +12,7 @@ export default function Adapters() {
       </section>
       <section>
         {/* Tocar un adaptador y que se vea la info dentro */}
+        <AdapterForm />
       </section>
     </main>
     </>

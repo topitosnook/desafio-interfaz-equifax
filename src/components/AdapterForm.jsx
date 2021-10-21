@@ -3,8 +3,6 @@ import '../css/AdapterForm.css'
 import { saveAs } from 'file-saver';
 import YAML from 'yaml';
 
-import { render } from 'react-dom'
-
 export default function AdapterForm() {
 
   const [id, setId] = React.useState('');
@@ -84,11 +82,3 @@ export default function AdapterForm() {
 
 
 
-
-
-
-
-
-
-{/* Formulario de edicion del adaptador */ }
-{/* Boton de guardar la edicion a la configuracion */ }

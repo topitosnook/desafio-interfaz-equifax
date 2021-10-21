@@ -12,7 +12,7 @@ export default function App() {
       <Switch>
         <Route path="/" exact >
           <Home />
-        </Route>git fetch origin
+        </Route>
         <Route path="/adapters">
           <Adapters />
         </Route>
