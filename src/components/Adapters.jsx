@@ -1,11 +1,14 @@
 import React from 'react';
 
-export default function Adapters() {
+export default function Adapters({name}) {
+  console.log(name);
+   
   return (
-    <>
-    <h1>Elegir adaptador</h1>
-      <div>{/* Guardados los adaptadores */}</div>
-      <div>{/* Informacion adaptador elegido - formulario */}</div>
-    </>
-  );
+    <div>
+      <p>{name}..</p>
+      <h1>Elegir adaptador</h1>
+    </div>
+   
+        );
 }
+
