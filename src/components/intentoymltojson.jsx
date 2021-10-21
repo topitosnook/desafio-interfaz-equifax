@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { saveAs } from 'file-saver';
 import './App.css';
 import { load } from 'js-yaml'
-import { render } from 'react-dom'
 import React from 'react'
 
 function App() {
