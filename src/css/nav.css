@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.nav{
+    background-color: #A30732 !important;   
+}
+
+.navLinks{
+    text-decoration: none;
+    color: white;
+    font-size: 150%;
+    font-family: 'Lato', sans-serif;
+    margin-top: 1%;
+    margin-left: 73%;
+}

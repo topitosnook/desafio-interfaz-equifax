@@ -1,5 +1,5 @@
 import React from 'react';
-import AdapterForm from './AdapterForm';
+//import AdapterForm from './AdapterForm';
 // import { useState, useEffect } from 'react/cjs/react.development';
 import Form from './Form';
 

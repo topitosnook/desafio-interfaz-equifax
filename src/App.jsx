@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Adapters from './components/Adapters';
 import Home from './components/Home';
-import AdapterForm from './components/AdapterForm';
+//import AdapterForm from './components/AdapterForm';
 import Nav from './components/Nav';
 import { load } from 'js-yaml';
+import Footer from './components/Footer';
+
+
 
 export default function App() {
   const [name, setName] = useState('');
@@ -31,14 +34,16 @@ export default function App() {
   return (
     <Router>
       <Nav />
-      <Switch>
+        <Switch>
         <Route path='/' exact>
           <Home setName={setName} />
         </Route>
         <Route path='/adapters'>
           <Adapters name={name} fixKeys={fixKeys}/>
         </Route>
-      </Switch>
+      </Switch>  
+      <Footer />    
     </Router>
+  
   );
 }
