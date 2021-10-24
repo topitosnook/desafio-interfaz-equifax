@@ -4,7 +4,6 @@ import Adapters from './components/Adapters';
 import Home from './components/Home';
 //import AdapterForm from './components/AdapterForm';
 import Nav from './components/Nav';
-//import { load } from 'js-yaml';
 import Footer from './components/Footer';
 
 
