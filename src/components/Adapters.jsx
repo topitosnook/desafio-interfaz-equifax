@@ -1,9 +1,11 @@
 import React from 'react';
 //import AdapterForm from './AdapterForm';
 // import { useState, useEffect } from 'react/cjs/react.development';
-import Form from './Form';
+//import Form from './Form';
+//import FormMay from './FormMay';
+import ButtonOne from './ButtonOne';
 
-export default function Adapters({ name, fixKeys }) {
+export default function Adapters({ name, data }) {
  
   return (
     <>
@@ -11,12 +13,12 @@ export default function Adapters({ name, fixKeys }) {
         <p>{name}</p>
         <h1>Elegir adaptador</h1>
         <section>
+          <ButtonOne />
           {/* <a>{objData.id}</a> */}
-        </section>
-        <section>
+        
           {/* Tocar un adaptador y que se vea la info dentro */}
           {/* <AdapterForm /> */}
-          <Form fixKeys={fixKeys} />
+          {/* <FormMay  data={data} /> */}
         </section>
       </main>
     </>

@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Adapters from './components/Adapters';
 import Home from './components/Home';
 //import AdapterForm from './components/AdapterForm';
 import Nav from './components/Nav';
-import { load } from 'js-yaml';
+//import { load } from 'js-yaml';
 import Footer from './components/Footer';
 
 
 
 export default function App() {
   const [name, setName] = useState('');
-  const [data, setData] = useState([]);
+  /* const [data, setData] = useState([]);
   const [fixKeys, setFixKeys] = useState([]);
   const[obj,setObj] =useState([])
 
@@ -26,10 +26,10 @@ export default function App() {
         setObj(Object.values(aux[0]));
       })
       .catch((err) => console.log('yaml err:', err));
-  }, []);
-  console.log(data.config);
+  }, []); */
+  /* console.log(data);
   console.log(fixKeys)
-  console.log(obj);
+  console.log(obj); */
 
   return (
     <Router>
@@ -39,7 +39,7 @@ export default function App() {
           <Home setName={setName} />
         </Route>
         <Route path='/adapters'>
-          <Adapters name={name} fixKeys={fixKeys}/>
+          <Adapters name={name} /* data={data} *//>
         </Route>
       </Switch>  
       <Footer />    
