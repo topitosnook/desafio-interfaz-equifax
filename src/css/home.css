@@ -10,8 +10,8 @@ body {
     width: 33%;
     height: 30%;
     position: relative;
-    margin-left: 32%;
-    margin-top: 6%;
+    margin-left: 29%;
+    margin-top: -26%;
     border-radius: 2%;
    
 }
@@ -22,16 +22,6 @@ body {
     color: white;
     font-family: 'Lato', sans-serif;
     
-}
-
-.btnHome{
-    background-color: white;
-    margin-top: 6%;
-    margin-left: 34%;
-    border:none;
-    border-radius: 5%;
-    width: 30%;
-    font-family: 'Lato', sans-serif;
 }
 
 .inputHome{
