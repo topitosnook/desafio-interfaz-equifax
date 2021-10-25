@@ -1,40 +1,122 @@
-import React from 'react';
-//import FormItem from './FormItem';
+import React, { useState, useEffect } from 'react';
 
+export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
+  let object = {};
+  fixKeys.fixKeys.forEach((key) => (object[key] = []));
+  object['config'] = [];
+  let config = {};
+  fixKeys.firstConfigKeys.forEach((key) => (config[key] = []));
+  let insideConfig = {};
+  fixKeys.lastConfigKeys.forEach((key) => (insideConfig[key] = []));
+  // console.log(insideConfig);
+  //--------------------------------------------
+  // To build the object
+  // object.config = config;
+  // object.config.datasources = insideConfig;
+  //--------------------------------------------
+  const [id, setId] = useState();
+  const [mainClass, setMainClass] = useState();
+  const [dep, setDep] = useState();
+  const [stepName, setStepName] = useState();
+  // const [lists, setLists] = useState([]); // Toda la lista de data source
+  // const [listValue, setListValue] = useState(); // cada valor dentro de datasource
+  const [formAdd, setFormAdd] = useState([]); // Ocupar para ver si se genera el formulario de datasources
 
-export default function Form({ fixKeys, configKeys, nextConfigKeys, obj }) {
+  const handleAddFields = () => {
+    setFormAdd((prev) => [...prev, insideConfig]);
+  };
+  // Arreglar esto!!
+  const handleRemoveFields = (e, index) => {
+    e.preventDefault();
+    setFormAdd((prev) => prev.filter((item) => item !== prev[index]));
+  };
+
+  const data = [];
+  const data1 = [];
+  const data2 = [];
+
+  // const [object, setObject] = useState({});
+  // console.log('list', lists);
+  // console.log(object)
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setId(data[0]);
+    setDep(data[1]);
+    setStepName(data[2]);
+    setMainClass(data[3]);
+  };
+
+  useEffect(() => {
+    object.id = id;
+    object.dependencies = dep;
+    object.stepName = stepName;
+    object.mainClass = mainClass;
+  }, [data]);
+
+  // console.log(object);
+  // console.log(object);
+  // const handleAddFields = () => {
+  //   setLists([...lists, insideConfig]);
+  // };
 
   return (
     <div>
-      {fixKeys.length > 0 &&
-        fixKeys.map((key) => {
-          return (
-            <>
-              <label>{key}</label>
-              <input type='text' />
-            </>
-          );
-        })}
-      <h1>Config</h1>
-      {configKeys.length > 0 &&
-        configKeys.map((key) => {
-          return (
-            <>
-              <label>{key}</label>
-              <input type='text' />
-            </>
-          );
-        })}
-      <h1>data</h1>
-      {/* {nextConfigKeys.length > 0 &&
-        nextConfigKeys.map((key) => {
-          return (
-            <>
-              <label>{key}</label>
-              <input type='text' />
-            </>
-          );
-        })} */}
+      <h1>Configuración del adaptador</h1>
+      <form>
+        {fixKeys.fixKeys.length === 4 &&
+          fixKeys.fixKeys.map((llave, index) => {
+            return (
+              <div key={index}>
+                <label htmlFor=''>{llave}</label>
+                <input type='text' id={llave} onChange={(event) => (data[index] = [llave, event.target.value])} />
+              </div>
+            );
+          })}
+        <h2>Config</h2>
+        {fixKeys.fixKeys.length === 4 &&
+          fixKeys.firstConfigKeys.map((llave, index) => {
+            if (index === fixKeys.firstConfigKeys.length - 1) {
+              return <h3 key={index}>{llave}</h3>;
+            } else {
+              return (
+                <div key={index}>
+                  <label htmlFor=''>{llave}</label>
+                  <input type='text' id={llave} onChange={(event) => (data1[index] = event.target.value)} />
+                </div>
+              );
+            }
+          })}
+        <div>
+          {formAdd.length > 0 &&
+            formAdd.map((objeto, i) => {
+              const llaves = Object.keys(objeto);
+              return (
+                <div>
+                  {' '}
+                  {llaves.map((llave, index) => {
+                    return (
+                      <div key={index}>
+                        <label htmlFor=''>{llave}</label>
+                        <input type='text' id={llave} onChange={(event) => (data2[index] = event.target.value)} />
+                      </div>
+                    );
+                  })}
+                  <button type='button' onClick={(e) => handleRemoveFields(e, i)}>
+                    Borrar
+                  </button>
+                </div>
+              );
+            })}
+          <button type='button' onClick={handleAddFields}>
+            +
+          </button>
+        </div>
+
+        <button type='submit' onClick={onSubmit}>
+          Guardar
+        </button>
+      </form>
     </div>
   );
 }

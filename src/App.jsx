@@ -15,7 +15,7 @@ export default function App() {
   const [data, setData] = useState([]);
   const allAdaptersNames = [];
   const dataAdapters = [];
-  const nameFiles = ['data/config/dataEnricher.yml', 'data/config/outputHandler.yml'];
+  const nameFiles = ['data/config/dataEnricher.yml', 'data/config/outputHandler.yml', 'data/config/evaluateConditions.yml'];
   useEffect(() => {
     nameFiles.forEach((file) => {
       fetch(file)
@@ -40,15 +40,6 @@ export default function App() {
         </Route>
         <Route path='/adapters'>
           <Adapters nameAdapters={nameAdapters} name={name} data={data} />
-          {/* <Adapters
-            nameAdapters={nameAdapters}
-            name={name}
-            data={data}
-            fixKeys={fixKeys}
-            firstConfigKeys={firstConfigKeys}
-            lastConfigKeys={lastConfigKeys}
-          /> */}
-          {/* <Adapters nameAdapters={nameAdapters} name={name} fixKeys={fixKeys} configKeys={configKeys} nextConfigKeys={nextConfigKeys} obj={obj} /> */}
         </Route>
       </Switch>
       <Footer />
