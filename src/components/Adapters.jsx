@@ -1,7 +1,9 @@
+
 import React, {useState, useEffect} from 'react';
 // import AdapterForm from './AdapterForm';
 import Form1 from './Form1';
-
+  //import FormMay from './FormMay';
+// import ButtonOne from './ButtonOne';
 export default function Adapters({ name, nameAdapters, data }) {
   // console.log(data[0][4][1]) // this get what is inside Config for the firts adapter (position[0])
   const [fixKeys, setFixKeys] = useState([]);
@@ -47,12 +49,19 @@ export default function Adapters({ name, nameAdapters, data }) {
   // console.log(fixKeys);
   // console.log(firstConfigKeys)
   // console.log(lastConfigKeys);
+
   return (
     <>
       <main>
         <p>{name}</p>
         <h1>Elegir adaptador</h1>
         <section>
+//           <ButtonOne />
+          {/* <a>{objData.id}</a> */}
+        
+          {/* Tocar un adaptador y que se vea la info dentro */}
+          {/* <AdapterForm /> */}
+          {/* <FormMay  data={data} /> */}
           {nameAdapters.length === 2 &&
             nameAdapters.map((adapter, index) => {
               return (

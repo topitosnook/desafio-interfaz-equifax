@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Adapters from './components/Adapters';
 import Home from './components/Home';
-// import AdapterForm from './components/AdapterForm';
 import Nav from './components/Nav';
-import { load } from 'js-yaml';
+import Footer from './components/Footer';
+
+
 
 export default function App() {
   // const [fixKeys, setFixKeys] = useState([]);
@@ -34,11 +35,12 @@ export default function App() {
   return (
     <Router>
       <Nav />
-      <Switch>
+        <Switch>
         <Route path='/' exact>
           <Home setName={setName} />
         </Route>
         <Route path='/adapters'>
+
           <Adapters nameAdapters={nameAdapters} name={name} data={data} />
           {/* <Adapters
             nameAdapters={nameAdapters}
@@ -50,7 +52,9 @@ export default function App() {
           /> */}
           {/* <Adapters nameAdapters={nameAdapters} name={name} fixKeys={fixKeys} configKeys={configKeys} nextConfigKeys={nextConfigKeys} obj={obj} /> */}
         </Route>
-      </Switch>
+      </Switch>  
+      <Footer />    
     </Router>
+  
   );
 }

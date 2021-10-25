@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+
+
+footer{
+    background-color: #555;
+    margin-top: 13%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+   
+}
+
+.efx{
+    width: 5%;
+}
+
+.pFooter{
+    font-size: 54%;
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
