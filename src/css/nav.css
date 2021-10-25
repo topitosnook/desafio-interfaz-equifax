@@ -5,10 +5,12 @@
 }
 
 .navLinks{
-    text-decoration: none;
+    
     color: white;
     font-size: 150%;
     font-family: 'Lato', sans-serif;
     margin-top: 1%;
     margin-left: 73%;
+}
+a:link {text-decoration: none;
 }
