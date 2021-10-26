@@ -134,7 +134,7 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
                 }
               })}
               <div>
-            <div>
+            <div className='config-form'>
               {formAdd.length > 0 &&
                 formAdd.map((objeto, i) => {
                   const llaves = Object.keys(objeto);
@@ -174,10 +174,10 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
                 +
               </button>
             </div>
-            <button type='submit' onClick={onSubmit}>
+            <button type='submit' className='getBtn' onClick={onSubmit}>
               Guardar
             </button>
-            <button type='submit' onClick={onDownload}>
+            <button type='submit' className='getBtn' onClick={onDownload}>
               Descargar
             </button>
           </div>
