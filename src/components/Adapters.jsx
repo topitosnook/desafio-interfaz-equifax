@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Form from './Form';
+import '../css/form.css';
 
 export default function Adapters({ name, nameAdapters, data }) {
   const [fixKeys, setFixKeys] = useState([]);
   const [firstConfigKeys, setFirstConfigKeys] = useState([]);
   const [lastConfigKeys, setLastConfigKeys] = useState([]);
   const [activeAdapter, setActiveAdapter] = useState(0);
-  
+
   // const [mainClass, setMainClass] = useState([]);
   const getValue = (e) => {
     setActiveAdapter(e.target.value);
@@ -41,27 +42,36 @@ export default function Adapters({ name, nameAdapters, data }) {
 
   return (
     <>
-      <main>
-        <p>{name}</p>
+      {/* <main> */}
+      {/* <p>{name}</p>
         <h1>Elegir adaptador</h1>
         <section>
+          {nameAdapters.length === 3 && */}
+      <p className='pAdapters'>Nombre de orquestación:{name}</p>
+      <h1 className='elegirAdapter'>Elegir adaptador:</h1>
+      <section className='section'>
+        <div className='btnBox'>
           {nameAdapters.length === 3 &&
             nameAdapters.map((adapter, index) => {
               return (
                 <>
                   <div key={index}>
-                    <button type='button' value={index} onClick={getValue}>
+                    <button type='button' className='btn btn-lg' value={index} onClick={getValue}>
                       {adapter}
                     </button>
+                    <br />
+                    <br />
                   </div>
                 </>
               );
             })}
-        </section>
-        <section>
+        </div>
+        <div className='divForm'>
           <Form fixKeys={fixKeys} name={name} firstConfigKeys={firstConfigKeys} lastConfigKeys={lastConfigKeys} />
-        </section>
-      </main>
+          {/* </section>
+      </main> */}
+        </div>
+      </section>
     </>
   );
 }

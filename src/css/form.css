@@ -1,0 +1,140 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Open+Sans:wght@600&display=swap');
+
+
+h3{
+    font-size: 110%;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 0%;
+    margin-top: 7%;
+
+}
+
+.pAdapters{    
+    font-size: 150%;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 2%;
+    margin-left: 1%;
+    text-decoration: underline black;
+    
+}
+
+.elegirAdapter{
+    font-size: 150%;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 0%;
+    margin-left: 1%;
+
+}
+
+.adapterBtn{
+    background-color: #A30732; 
+    width: 35%;
+    font-size: 125%;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    border-radius: 3%;
+    border: none;
+    margin-left: 8%;
+    margin-top: -7%;
+}
+
+.divFormOne{    
+    width: 23%;
+    height: auto;
+    margin-left: 15%;
+    margin-top: auto;
+    position: relative;
+    
+}
+.btnBox{   
+    width: 30%;
+    height: auto;
+    margin-top: 5%;
+}
+
+.getBtn{
+    background-color: #A30732; 
+    width: 15%;
+    font-size: 125%;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    border-radius: 3%;
+    border: none;
+    margin-left: 57%;
+    margin-top: -7%;
+
+}
+
+.adition {
+    background-color: #A30732;
+    color: white; 
+    width: 7%;
+    font-size: 125%;     
+    border-radius: 3%;
+    border: none;
+    margin-left: 73%;
+    margin-top: -7%;
+}
+
+.btnDanger{
+    background-color: #A30732; 
+    width: 8%;
+    font-size: 125%;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    border-radius: 3%;
+    border: none;
+    margin-left: 61%;
+    margin-top: -7%;
+
+}
+
+.btn{
+    background-color: #A30732;
+    color: white;
+
+}
+.section{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1%;
+}
+.divForm{
+    width: 100%;
+    height: auto;    
+}
+
+.divFormTwo{
+    width: 30%;
+    height: auto;
+    margin-left: 48%;
+    margin-top: 1%;
+    background-color: #007298;
+    
+
+}
+.configAdapters{
+    font-size: 110%;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 15%;
+    margin-top: 0%;
+
+}
+.configAdaptersOne{
+    font-size: 110%;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 0%;
+    margin-top: -121%;
+
+}
+.inputForm{
+    background-color: #007298;
+    width: 30%;
+    margin-left: 48%;
+}
+
+.label{
+    font-size: 110%;
+    font-family: 'Open Sans', sans-serif;
+}
