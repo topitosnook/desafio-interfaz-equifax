@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import YAML from 'js-yaml';
+import YAML from 'js-yaml';
 import { saveAs } from 'file-saver';
 // import YAML from 'json2yaml';
 
@@ -9,7 +9,6 @@ import { saveAs } from 'file-saver';
 export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
   let object = {};
   fixKeys.fixKeys.forEach((key) => (object[key] = []));
-  object['config'] = [];
   let config = {};
   fixKeys.firstConfigKeys.forEach((key) => (config[key] = []));
   let insideConfig = {};
@@ -51,9 +50,9 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
   let adapterArray = [];
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log('data', data);
-    console.log('data1', data1);
-    console.log('data2', data2);
+    // console.log('data', data);
+    // console.log('data1', data1);
+    // console.log('data2', data2);
 
     const adapterObject = {};
     const configObject = {};
@@ -70,22 +69,25 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
       }
     });
     adapterObject['config'] = configObject;
-    console.log(adapterObject);
-    console.log(configObject);
+    // console.log(adapterObject);
+    // console.log(configObject);
     adapterArray = [...adapterArray, adapterObject];
-    console.log('adapterArray', adapterArray);
   };
 
   const onDownload = (e) => {
     e.preventDefault();
-    console.log('desc');
-    // const data = YAML.stringify(adapterArray);
-    // console.log(data);
-    // const jsonToYaml = YAML.stringify(adapterArray, null, 2);
-    // console.log(jsonToYaml);
-    const blob = new Blob([data], { type: 'text/plain;charset=utf-8' });
+    console.log('adapterArray', adapterArray);
+    let jasonfile =JSON.stringify(adapterArray);
+    jasonfile =JSON.parse(jasonfile);
+    console.log('jasonFile', jasonfile);
+
+    const jsonToYaml = YAML.dump(jasonfile);
+    const blob = new Blob([jsonToYaml], { type: 'text/plain;charset=utf-8' });
     saveAs(blob, `${fixKeys.name}.yml`);
   };
+
+
+
   console.log(formAdd);
   return (
     <div>

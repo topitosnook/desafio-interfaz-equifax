@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import AdapterForm from './AdapterForm';
 import Form from './Form';
-//import FormMay from './FormMay';
-// import ButtonOne from './ButtonOne';
 
 export default function Adapters({ name, nameAdapters, data }) {
   const [fixKeys, setFixKeys] = useState([]);
@@ -48,9 +45,6 @@ export default function Adapters({ name, nameAdapters, data }) {
         <p>{name}</p>
         <h1>Elegir adaptador</h1>
         <section>
-          {/* <ButtonOne /> */}
-          {/* <a>{objData.id}</a> */}
-          {/* <FormMay  data={data} /> */}
           {nameAdapters.length === 3 &&
             nameAdapters.map((adapter, index) => {
               return (
@@ -66,8 +60,6 @@ export default function Adapters({ name, nameAdapters, data }) {
         </section>
         <section>
           <Form fixKeys={fixKeys} name={name} firstConfigKeys={firstConfigKeys} lastConfigKeys={lastConfigKeys} />
-          {/* <AdapterForm /> */}
-          {/* <Form fixKeys={fixKeys} configKeys={configKeys} nextConfigKeys={nextConfigKeys} obj={obj}/> */}
         </section>
       </main>
     </>
