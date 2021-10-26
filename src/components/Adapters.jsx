@@ -42,12 +42,7 @@ export default function Adapters({ name, nameAdapters, data }) {
 
   return (
     <>
-      {/* <main> */}
-      {/* <p>{name}</p>
-        <h1>Elegir adaptador</h1>
-        <section>
-          {nameAdapters.length === 3 && */}
-      <p className='pAdapters'>Nombre de orquestación:{name}</p>
+      <p className='pAdapters'>Nombre:{name}</p>
       <h1 className='elegirAdapter'>Elegir adaptador:</h1>
       <section className='section'>
         <div className='btnBox'>
@@ -68,10 +63,15 @@ export default function Adapters({ name, nameAdapters, data }) {
         </div>
         <div className='divForm'>
           <Form fixKeys={fixKeys} name={name} firstConfigKeys={firstConfigKeys} lastConfigKeys={lastConfigKeys} />
-          {/* </section>
-      </main> */}
+         
         </div>
       </section>
     </>
   );
 }
+
+
+
+
+
+

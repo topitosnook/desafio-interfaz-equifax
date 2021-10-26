@@ -91,10 +91,7 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
         <form>
           {fixKeys.fixKeys.length === 4 &&
             fixKeys.fixKeys.map((llave, index) => {
-              return (
-                // <div key={index}>
-                //   <label htmlFor=''>{llave}</label>
-                //   <input type='text' name={llave} onChange={(event) => (data[index] = [llave, event.target.value])} />
+              return (               
                 <div key={index} className='divFormOne'>
                   <label htmlFor=''>{llave}</label>
                   <br />
@@ -119,8 +116,8 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
                 } else {
                   return (
                     <div key={index}>
-                      <label htmlFor=''>{llave}</label>
-                      {/* <input type='text' name={llave} onChange={(event) => (data1[index] = [llave, event.target.value])} /> */}
+                      <label htmlFor=''>{llave}</label><br/> 
+                      <br/>                  
                       <input
                         type='text'
                         className='form-control'
@@ -142,16 +139,12 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
                     <div key={i}>
                       {llaves.map((llave, index) => {
                         return (
-                          //   <div key={index}>
-                          //     <label htmlFor=''>{llave}</label>
-                          //     <input type='text' name={llave} onChange={(event) => (data2[index] =[[i, llave, event.target.value]])} />
-                          //     {/* <input type='text' name={llave} onChange={(e) => onChangeVal(index, e)} /> */}
-                          //   </div>
-                          // );
+                         
                           <div key={index} className='inputForm'>
                             <label htmlFor='' className='label'>
                               {llave}
                             </label>
+                            <br/>
                             <input
                               type='text'
                               className='form-control'
@@ -177,9 +170,10 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
             <button type='submit' className='getBtn' onClick={onSubmit}>
               Guardar
             </button>
-            <button type='submit' className='getBtn' onClick={onDownload}>
+            <button type='submit' className='descargarBtn' onClick={onDownload}>
               Descargar
-            </button>
+            </button><br/>
+            <br/>
           </div>
           </div>
           
