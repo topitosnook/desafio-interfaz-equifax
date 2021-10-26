@@ -9,6 +9,7 @@ export default function Adapters({ name, nameAdapters, data }) {
   const [firstConfigKeys, setFirstConfigKeys] = useState([]);
   const [lastConfigKeys, setLastConfigKeys] = useState([]);
   const [activeAdapter, setActiveAdapter] = useState(0);
+  
   // const [mainClass, setMainClass] = useState([]);
   const getValue = (e) => {
     setActiveAdapter(e.target.value);
