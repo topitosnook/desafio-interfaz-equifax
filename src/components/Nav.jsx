@@ -7,7 +7,7 @@ export default function Nav() {
   return (
   <nav className='nav'>
     <img className="logo" src={logo} alt="Equifax"></img>
-    <Link to="/" exact className = "navLinks"><button type='button' class="btn btn-outline-light"> Inicio</button>     
+    <Link to="/" exact className = "navLinks"><button type='button' className="btn btn-outline-light"> Inicio</button>     
     </Link>
   </nav>
   );

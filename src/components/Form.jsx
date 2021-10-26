@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import '../css/form.css';
 
 export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
   let object = {};
@@ -62,18 +63,22 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
 
   return (
     <div>
-      <h1>Configuración del adaptador</h1>
-      <form>
+      <h2 className='configAdapters'>Configuración del adaptador:</h2>
+      <form >
         {fixKeys.fixKeys.length === 4 &&
           fixKeys.fixKeys.map((llave, index) => {
             return (
-              <div key={index}>
-                <label htmlFor=''>{llave}</label>
-                <input type='text' id={llave} onChange={(event) => (data[index] = [llave, event.target.value])} />
+              <div key={index} className='divFormOne'>
+                
+                <label htmlFor=''>{llave}</label><br/>
+                <br/>
+                <input type='text' className="form-control" id="formGroupExampleInput" spellcheck="false" id={llave} onChange={(event) => (data[index] = [llave, event.target.value])} />
+                
               </div>
             );
           })}
-        <h2>Config</h2>
+          <div className='divFormTwo'>
+        <h2 className='configAdaptersOne'>Config:</h2>
         {fixKeys.fixKeys.length === 4 &&
           fixKeys.firstConfigKeys.map((llave, index) => {
             if (index === fixKeys.firstConfigKeys.length - 1) {
@@ -82,11 +87,12 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
               return (
                 <div key={index}>
                   <label htmlFor=''>{llave}</label>
-                  <input type='text' id={llave} onChange={(event) => (data1[index] = event.target.value)} />
+                  <input type='text' className="form-control" id="formGroupExampleInput" spellcheck="false" id={llave} onChange={(event) => (data1[index] = event.target.value)} />
                 </div>
               );
             }
           })}
+          </div>
         <div>
           {formAdd.length > 0 &&
             formAdd.map((objeto, i) => {
@@ -96,26 +102,27 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
                   {' '}
                   {llaves.map((llave, index) => {
                     return (
-                      <div key={index}>
-                        <label htmlFor=''>{llave}</label>
-                        <input type='text' id={llave} onChange={(event) => (data2[index] = event.target.value)} />
-                      </div>
-                    );
+                      <div key={index} className='inputForm'>
+                        <label htmlFor='' className='label'>{llave}</label>
+                        <input type='text' className="form-control" id="formGroupExampleInput" spellcheck="false" id={llave} onChange={(event) => (data2[index] = event.target.value)} /><br/>
+                      </div>                      
+                    )
                   })}
-                  <button type='button' onClick={(e) => handleRemoveFields(e, i)}>
+                  <button type='button' className='btnDanger' onClick={(e) => handleRemoveFields(e, i)}>
                     Borrar
-                  </button>
+                  </button>                  
                 </div>
               );
             })}
-          <button type='button' onClick={handleAddFields}>
+          <button type='button' className='adition' onClick={handleAddFields}>
             +
           </button>
-        </div>
+        </div><br/>
 
-        <button type='submit' onClick={onSubmit}>
+        <button type='submit' className='getBtn' onClick={onSubmit}>
           Guardar
-        </button>
+        </button>    
+                    
       </form>
     </div>
   );
