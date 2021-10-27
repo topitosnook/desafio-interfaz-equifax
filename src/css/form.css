@@ -107,7 +107,9 @@ h3 {
   border-left-color: #808b96;
   border-left-style: solid;
 }
+.dinamicGeneratedConfigForm{
 
+}
 .divFormTwo {
   width: 30%;
   height: auto;
@@ -120,7 +122,7 @@ h3 {
 }
 
 .divFormTwo:hover {
-  background-color: #007298;
+  background-color: #d6d6d6;
 }
 
 .configAdapters {
