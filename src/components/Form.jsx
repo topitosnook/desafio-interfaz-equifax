@@ -11,45 +11,24 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
   let insideConfig = {};
   fixKeys.lastConfigKeys.forEach((key) => (insideConfig[key] = []));
 
-  const [formAdd, setFormAdd] = useState([]); // Ocupar para ver si se genera el formulario de datasources
+  const [formAdd, setFormAdd] = useState([]); 
 
   const handleAddFields = (e) => {
     e.preventDefault();
     setFormAdd((prev) => [...prev, insideConfig]);
   };
 
-  // Arreglar esto!!
   const handleRemoveFields = (e, index) => {
     e.preventDefault();
     setFormAdd((prev) => prev.filter((item) => item !== prev[index]));
   };
 
-  // const onChangeVal = (index, event) => {
-  //   event.preventDefault();
-  //   setFormAdd((prev) =>
-  //     prev.map((item, i) => {
-  //       if (i !== index) {
-  //         return item;
-  //       }
-  //       return {
-  //         ...item,
-  //         [event.target.name]: event.target.value,
-  //       };
-  //     })
-  //   );
-  // };
-  // console.log('fromAdd', formAdd);
-
   const data = [];
   const data1 = [];
   const data2 = [];
-  // console.log(fixKeys.firstConfigKeys);
   let adapterArray = [];
   const onSubmit = (e) => {
     e.preventDefault();
-    // console.log('data', data);
-    // console.log('data1', data1);
-    // console.log('data2', data2);
 
     const adapterObject = {};
     const configObject = {};
@@ -66,8 +45,7 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
       }
     });
     adapterObject['config'] = configObject;
-    // console.log(adapterObject);
-    // console.log(configObject);
+
     adapterArray = [...adapterArray, adapterObject];
   };
 
@@ -118,6 +96,7 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
                     <div key={index}>
                       <label htmlFor=''>{llave}</label><br/> 
                       <br/>                  
+
                       <input
                         type='text'
                         className='form-control'
@@ -130,59 +109,96 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
                   );
                 }
               })}
+            <div>
               <div>
-            <div className='config-form'>
-              {formAdd.length > 0 &&
-                formAdd.map((objeto, i) => {
-                  const llaves = Object.keys(objeto);
-                  return (
-                    <div key={i}>
-                      {llaves.map((llave, index) => {
-                        return (
+
+//             <div className='config-form'>
+//               {formAdd.length > 0 &&
+//                 formAdd.map((objeto, i) => {
+//                   const llaves = Object.keys(objeto);
+//                   return (
+//                     <div key={i}>
+//                       {llaves.map((llave, index) => {
+//                         return (
                          
-                          <div key={index} className='inputForm'>
-                            <label htmlFor='' className='label'>
-                              {llave}
-                            </label>
-                            <br/>
-                            <input
-                              type='text'
-                              className='form-control'
-                              id='formGroupExampleInput'
-                              spellcheck='false'
-                              id={llave}
-                              onChange={(event) => (data2[index] = event.target.value)}
-                            />
-                            <br />
-                          </div>
-                        );
-                      })}
-                      <button type='button' className='btnDanger' onClick={(e) => handleRemoveFields(e, i)}>
-                        Borrar
-                      </button>
-                    </div>
-                  );
-                })}
-              <button type='button' className='adition' onClick={handleAddFields}>
-                +
+//                           <div key={index} className='inputForm'>
+//                             <label htmlFor='' className='label'>
+//                               {llave}
+//                             </label>
+//                             <br/>
+//                             <input
+//                               type='text'
+//                               className='form-control'
+//                               id='formGroupExampleInput'
+//                               spellcheck='false'
+//                               id={llave}
+//                               onChange={(event) => (data2[index] = event.target.value)}
+//                             />
+//                             <br />
+//                           </div>
+//                         );
+//                       })}
+//                       <button type='button' className='btnDanger' onClick={(e) => handleRemoveFields(e, i)}>
+//                         Borrar
+//                       </button>
+//                     </div>
+//                   );
+//                 })}
+//               <button type='button' className='adition' onClick={handleAddFields}>
+//                 +
+//               </button>
+//             </div>
+//             <button type='submit' className='getBtn' onClick={onSubmit}>
+//               Guardar
+//             </button>
+//             <button type='submit' className='descargarBtn' onClick={onDownload}>
+//               Descargar
+//             </button><br/>
+//             <br/>
+//           </div> 
+
+                {formAdd.length > 0 &&
+                  formAdd.map((objeto, i) => {
+                    const llaves = Object.keys(objeto);
+                    return (
+                      <div key={i}>
+                        {llaves.map((llave, index) => {
+                          return (
+                            <div key={index} className='inputForm'>
+                              <label htmlFor='' className='label'>
+                                {llave}
+                              </label>
+                              <input
+                                type='text'
+                                className='form-control'
+                                id='formGroupExampleInput'
+                                spellcheck='false'
+                                id={llave}
+                                onChange={(event) => (data2[index] = event.target.value)}
+                              />
+                              <br />
+                            </div>
+                          );
+                        })}
+                        <button type='button' className='btnDanger' onClick={(e) => handleRemoveFields(e, i)}>
+                          Borrar
+                        </button>
+                      </div>
+                    );
+                  })}
+                <button type='button' className='adition' onClick={handleAddFields}>
+                  +
+                </button>
+              </div>
+              <button type='submit' className='getBtn' onClick={onSubmit}>
+                Guardar
+              </button>
+              <button type='submit' className='getBtn' onClick={onDownload}>
+                Descargar
               </button>
             </div>
-            <button type='submit' className='getBtn' onClick={onSubmit}>
-              Guardar
-            </button>
-            <button type='submit' className='descargarBtn' onClick={onDownload}>
-              Descargar
-            </button><br/>
-            <br/>
-          </div>
-          </div>
-          
 
-          <br />
-
-          {/* <button type='submit' className='getBtn' onClick={onSubmit}>
-          Guardar
-        </button>     */}
+          </div>
         </form>
       </div>
     </>

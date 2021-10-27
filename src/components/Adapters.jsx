@@ -8,7 +8,6 @@ export default function Adapters({ name, nameAdapters, data }) {
   const [lastConfigKeys, setLastConfigKeys] = useState([]);
   const [activeAdapter, setActiveAdapter] = useState(0);
 
-  // const [mainClass, setMainClass] = useState([]);
   const getValue = (e) => {
     setActiveAdapter(e.target.value);
   };
@@ -42,7 +41,8 @@ export default function Adapters({ name, nameAdapters, data }) {
 
   return (
     <>
-      <p className='pAdapters'>Nombre:{name}</p>
+
+      <p className='pAdapters'>Nombre de orquestación:{name}</p>
       <h1 className='elegirAdapter'>Elegir adaptador:</h1>
       <section className='section'>
         <div className='btnBox'>
@@ -63,7 +63,6 @@ export default function Adapters({ name, nameAdapters, data }) {
         </div>
         <div className='divForm'>
           <Form fixKeys={fixKeys} name={name} firstConfigKeys={firstConfigKeys} lastConfigKeys={lastConfigKeys} />
-         
         </div>
       </section>
     </>

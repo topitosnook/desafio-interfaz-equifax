@@ -7,9 +7,6 @@ import Footer from './components/Footer';
 import { load } from 'js-yaml';
 
 export default function App() {
-  // const [fixKeys, setFixKeys] = useState([]);
-  // const [firstConfigKeys, setFirstConfigKeys] = useState([]);
-  // const [lastConfigKeys, setLastConfigKeys] = useState([]);
   const [name, setName] = useState('');
   const [nameAdapters, setNameAdapters] = useState([]);
   const [data, setData] = useState([]);
