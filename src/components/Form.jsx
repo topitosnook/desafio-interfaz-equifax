@@ -11,7 +11,7 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
   let insideConfig = {};
   fixKeys.lastConfigKeys.forEach((key) => (insideConfig[key] = []));
 
-  const [formAdd, setFormAdd] = useState([]); 
+  const [formAdd, setFormAdd] = useState([]);
 
   const handleAddFields = (e) => {
     e.preventDefault();
@@ -69,10 +69,9 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
         <form>
           {fixKeys.fixKeys.length === 4 &&
             fixKeys.fixKeys.map((llave, index) => {
-              return (               
+              return (
                 <div key={index} className='divFormOne'>
                   <label htmlFor=''>{llave}</label>
-                  <br />
                   <br />
                   <input
                     type='text'
@@ -90,13 +89,12 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
             {fixKeys.fixKeys.length === 4 &&
               fixKeys.firstConfigKeys.map((llave, index) => {
                 if (index === fixKeys.firstConfigKeys.length - 1) {
-                  return <h3 key={index}>{llave}</h3>;
+                  return <h3 key={index}>{llave}:</h3>;
                 } else {
                   return (
                     <div key={index}>
-                      <label htmlFor=''>{llave}</label><br/> 
-                      <br/>                  
-
+                      <label htmlFor=''>{llave}</label>
+                      <br />
                       <input
                         type='text'
                         className='form-control'
@@ -110,58 +108,12 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
                 }
               })}
             <div>
-              <div>
-
-//             <div className='config-form'>
-//               {formAdd.length > 0 &&
-//                 formAdd.map((objeto, i) => {
-//                   const llaves = Object.keys(objeto);
-//                   return (
-//                     <div key={i}>
-//                       {llaves.map((llave, index) => {
-//                         return (
-                         
-//                           <div key={index} className='inputForm'>
-//                             <label htmlFor='' className='label'>
-//                               {llave}
-//                             </label>
-//                             <br/>
-//                             <input
-//                               type='text'
-//                               className='form-control'
-//                               id='formGroupExampleInput'
-//                               spellcheck='false'
-//                               id={llave}
-//                               onChange={(event) => (data2[index] = event.target.value)}
-//                             />
-//                             <br />
-//                           </div>
-//                         );
-//                       })}
-//                       <button type='button' className='btnDanger' onClick={(e) => handleRemoveFields(e, i)}>
-//                         Borrar
-//                       </button>
-//                     </div>
-//                   );
-//                 })}
-//               <button type='button' className='adition' onClick={handleAddFields}>
-//                 +
-//               </button>
-//             </div>
-//             <button type='submit' className='getBtn' onClick={onSubmit}>
-//               Guardar
-//             </button>
-//             <button type='submit' className='descargarBtn' onClick={onDownload}>
-//               Descargar
-//             </button><br/>
-//             <br/>
-//           </div> 
-
+              <div className="configDinamicForm">
                 {formAdd.length > 0 &&
                   formAdd.map((objeto, i) => {
                     const llaves = Object.keys(objeto);
                     return (
-                      <div key={i}>
+                      <div key={i} className="dinamicForm">
                         {llaves.map((llave, index) => {
                           return (
                             <div key={index} className='inputForm'>
@@ -197,7 +149,6 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
                 Descargar
               </button>
             </div>
-
           </div>
         </form>
       </div>
