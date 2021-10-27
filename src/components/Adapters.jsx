@@ -41,6 +41,7 @@ export default function Adapters({ name, nameAdapters, data }) {
 
   return (
     <>
+
       <p className='pAdapters'>Nombre de orquestación:{name}</p>
       <h1 className='elegirAdapter'>Elegir adaptador:</h1>
       <section className='section'>
@@ -67,3 +68,9 @@ export default function Adapters({ name, nameAdapters, data }) {
     </>
   );
 }
+
+
+
+
+
+

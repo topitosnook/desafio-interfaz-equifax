@@ -69,10 +69,7 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
         <form>
           {fixKeys.fixKeys.length === 4 &&
             fixKeys.fixKeys.map((llave, index) => {
-              return (
-                // <div key={index}>
-                //   <label htmlFor=''>{llave}</label>
-                //   <input type='text' name={llave} onChange={(event) => (data[index] = [llave, event.target.value])} />
+              return (               
                 <div key={index} className='divFormOne'>
                   <label htmlFor=''>{llave}</label>
                   <br />
@@ -97,7 +94,9 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
                 } else {
                   return (
                     <div key={index}>
-                      <label htmlFor=''>{llave}</label>
+                      <label htmlFor=''>{llave}</label><br/> 
+                      <br/>                  
+
                       <input
                         type='text'
                         className='form-control'
@@ -112,6 +111,52 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
               })}
             <div>
               <div>
+
+//             <div className='config-form'>
+//               {formAdd.length > 0 &&
+//                 formAdd.map((objeto, i) => {
+//                   const llaves = Object.keys(objeto);
+//                   return (
+//                     <div key={i}>
+//                       {llaves.map((llave, index) => {
+//                         return (
+                         
+//                           <div key={index} className='inputForm'>
+//                             <label htmlFor='' className='label'>
+//                               {llave}
+//                             </label>
+//                             <br/>
+//                             <input
+//                               type='text'
+//                               className='form-control'
+//                               id='formGroupExampleInput'
+//                               spellcheck='false'
+//                               id={llave}
+//                               onChange={(event) => (data2[index] = event.target.value)}
+//                             />
+//                             <br />
+//                           </div>
+//                         );
+//                       })}
+//                       <button type='button' className='btnDanger' onClick={(e) => handleRemoveFields(e, i)}>
+//                         Borrar
+//                       </button>
+//                     </div>
+//                   );
+//                 })}
+//               <button type='button' className='adition' onClick={handleAddFields}>
+//                 +
+//               </button>
+//             </div>
+//             <button type='submit' className='getBtn' onClick={onSubmit}>
+//               Guardar
+//             </button>
+//             <button type='submit' className='descargarBtn' onClick={onDownload}>
+//               Descargar
+//             </button><br/>
+//             <br/>
+//           </div> 
+
                 {formAdd.length > 0 &&
                   formAdd.map((objeto, i) => {
                     const llaves = Object.keys(objeto);
@@ -152,6 +197,7 @@ export default function Form(fixKeys, firstConfigKeys, lastConfigKeys, name) {
                 Descargar
               </button>
             </div>
+
           </div>
         </form>
       </div>

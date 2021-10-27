@@ -13,14 +13,16 @@ h3{
 .pAdapters{    
     font-size: 150%;
     font-family: 'Open Sans', sans-serif;
-    margin-top: 2%;
-    margin-left: 1%;
-    text-decoration: underline black;
+    margin-top: 5%;
+    margin-left: 23%;
+    color: white;
+    background-color: #A30732;
+    width: 78%;
     
 }
 
 .elegirAdapter{
-    font-size: 150%;
+    font-size: 130%;
     font-family: 'Open Sans', sans-serif;
     margin-top: 0%;
     margin-left: 1%;
@@ -50,18 +52,18 @@ h3{
 .btnBox{   
     width: 30%;
     height: auto;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .getBtn{
     background-color: #A30732; 
-    width: 15%;
-    font-size: 125%;
+    width: 35%;
+    font-size: 111%;
     font-family: 'Open Sans', sans-serif;
     color: white;
     border-radius: 3%;
     border: none;
-    margin-left: 57%;
+    margin-left: 1%;
     margin-top: -7%;
 
 }
@@ -69,17 +71,17 @@ h3{
 .adition {
     background-color: #A30732;
     color: white; 
-    width: 7%;
+    width: 10%;
     font-size: 125%;     
     border-radius: 3%;
     border: none;
     margin-left: 73%;
-    margin-top: -7%;
+    margin-top: 16%;
 }
 
 .btnDanger{
     background-color: #A30732; 
-    width: 8%;
+    width: 35%;
     font-size: 125%;
     font-family: 'Open Sans', sans-serif;
     color: white;
@@ -100,18 +102,31 @@ h3{
     justify-content: space-around;
     margin-top: 1%;
 }
+
 .divForm{
     width: 100%;
-    height: auto;    
+    height: 100%;
+    border-right-color: #808B96;
+    border-right-style: solid;
+    border-left-color:#808B96;
+    border-left-style:solid;  
+  
 }
 
 .divFormTwo{
     width: 30%;
     height: auto;
-    margin-left: 48%;
-    margin-top: 1%;
-    background-color: #007298;
+    margin-left: 55%;
+    margin-top: 5%;
+    background-color: #7c879c;
     border-radius: 10px;
+    -webkit-transition-duration: 0.5s;
+     transition-duration: 0.5s;
+}
+
+.divFormTwo:hover{
+    background-color: #007298;
+     
 }
 
 .configAdapters{
@@ -130,11 +145,24 @@ h3{
 }
 .inputForm{
     background-color: #007298;
-    width: 30%;
-    margin-left: 48%;
+    width: 100%;
+    margin-left: 0%;
+    
 }
 
 .label{
     font-size: 110%;
     font-family: 'Open Sans', sans-serif;
+}
+.descargarBtn{
+    background-color: #A30732; 
+    width: 35%;
+    font-size: 111%;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    border-radius: 3%;
+    border: none;
+    margin-left: 57%;
+    margin-top: -7%;
+
 }

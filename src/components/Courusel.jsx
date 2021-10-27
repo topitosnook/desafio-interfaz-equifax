@@ -1,5 +1,7 @@
 import React from 'react';
-import banner1 from '../assets/banner1.jpg';
+import banner1 from '../assets/2.gif';
+// import banner1 from '../assets/banner1.jpg';
+
 import '../css/courusel.css'
 
 export default function Courusel() {
