@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import { load } from 'js-yaml';
 
 export default function App() {
+  //estoy en dev
   const [name, setName] = useState('');
   const [nameAdapters, setNameAdapters] = useState([]);
   const [data, setData] = useState([]);
